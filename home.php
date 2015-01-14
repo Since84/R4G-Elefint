@@ -12,7 +12,7 @@
 	  ,'template'     =>  'header' //Name of header template
 	  ,'isJs'         =>  false
 	));	
-	// $context['header'] = $sparkHeader::getView();
+	$context['header'] = $sparkHeader::getView();
 
 	//Display Page using home template 
 	Timber::render('/views/pages/home.html.twig', $context);
