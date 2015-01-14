@@ -15,7 +15,7 @@
 	// $context['header'] = $sparkHeader::getView();
 
 	//Display Page using home template 
-	// Timber::render('/views/pages/home.html.twig', $context);
+	Timber::render('/views/pages/home.html.twig', $context);
 
 	get_footer();
 ?>
