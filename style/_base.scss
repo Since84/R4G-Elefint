@@ -1,0 +1,12 @@
+/** Base Styles for Rights for Girls **/
+
+$containerWidth: 1200px;
+
+
+
+// Layout/Frame
+@mixin container{
+	display: block;
+	margin: auto;
+	width: $containerWidth;
+}

@@ -1,0 +1,37 @@
+/** Header Styles **/
+
+header.spark-header{
+	@include container;
+	background: $black;
+
+	.site-logo{
+		display: inline-block;
+		width: 200px;
+		height: 35px;
+		background: $logo no-repeat;
+		background-size: contain;
+		&::before{
+			content: $home;
+			display: inline-block;
+			margin-left: 1em;
+			font-family: "FontAwesome"; 
+		}
+	}
+	.social{ 
+		li {
+			display: inline-block;
+			margin-right: 1em;
+			a{
+				&::before{
+					display: inline-block;
+					width: 30px;
+					height: 22px;
+					font-family: "FontAwesome";
+				}
+			}
+			&.twitter a::before { content: $twitter; }
+			&.facebook a::before { content: $facebook; }
+			&.mail a::before { content: $mail; }
+		}
+	} 
+}

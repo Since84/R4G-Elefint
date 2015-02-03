@@ -3,8 +3,10 @@
  *	Author:	Damon ( Elefint )
  *	Description: Child Theme of Spark15 for Rights For Girls
  *	Version: 0.1
- *	Template: spark15
+ *	Template: Spark15 
  */
 
-@import "compass/reset";
+@import "brand/brand";
 
+@import "base";
+@import "components/header"; 
