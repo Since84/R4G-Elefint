@@ -14,8 +14,12 @@
 	));	
 	$context['header'] = $sparkHeader::getView();
 
-	$context = Timber::get_context();
-	$context['content'] = get_page_by_title( 'home' );
+	$featureContext = Timber::get_context();
+	$featureContext['content'] = get_page_by_title( 'home' );
+	$content = new Content_Content(array(
+		'context'	=> $featureContext
+		,'template'	=> 'feature' 
+	));
 
 
 	//Display Page using home template 
