@@ -15,13 +15,14 @@
 	$context['header'] 	= $sparkHeader::getView();
 	
 	///Page Feature
-	$featureContext	= Timber::get_context();
-	$featureContext['heading'] = get_field( 'home_feature_heading', get_the_ID());
-	$featureContext['sub_heading'] = get_field( 'home_feature_sub_head', get_the_ID());
-	$featureContext['link'] = get_field( 'home_feature_link', get_the_ID()); 
-	$featureContext['image'] = get_field( 'home_feature_image', get_the_ID()); 
+	$galleryContext	= Timber::get_context();
+	$galleryContext = array( 
+						'showposts'		=> '-1',
+						'category_name'	=> 'featured'
+					);
+	$galleryContext['feed'] = get_posts($galleryContext);
 
-	$context['feature'] = Timber::compile('/views/components/feature.html.twig', $featureContext);
+	$context['team_gallery'] = Timber::compile('/views/components/feature.html.twig', $featureContext);
 
 
 	/// Mission Statement
