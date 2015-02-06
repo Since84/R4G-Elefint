@@ -3,16 +3,6 @@
 
 	//Get Timber Context. Provides Data to TWIG views
 	$context 		= Timber::get_context();
-
-	//Get Site Header : uses SparkHeader Class
-	$sparkHeader 	= new Header_Header(array(
-	  'showLogo'      =>  true
-	  ,'headerRight'  =>  'sidebars/social.php' //Template for right side ( /views/components/... )
-	  ,'nav'          =>  'main-nav' //Menu name for nav menu
-	  ,'template'     =>  'header' //Name of header template
-	  ,'isJs'         =>  false
-	));	
-	$context['header'] 	= $sparkHeader::getView();
 	
 	///Page Feature
 	$featureContext	= Timber::get_context();

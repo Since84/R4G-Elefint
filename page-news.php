@@ -4,18 +4,6 @@
 	//Get Timber Context. Provides Data to TWIG views
 	$context 		= Timber::get_context();
 
-	//Get Site Header : uses SparkHeader Class
-	$sparkHeader 	= new Header_Header(array(
-	  'showLogo'      =>  true
-	  ,'headerRight'  =>  'sidebars/social.php' //Template for right side ( /views/components/... )
-	  ,'nav'          =>  'main-nav' //Menu name for nav menu
-	  ,'template'     =>  'header' //Name of header template
-	  ,'isJs'         =>  false
-	));	
-	$context['header'] 	= $sparkHeader::getView();
-	
-	
-
  	/// Featured News and Updates 
 	$newsContext['spark_class'] = 	'featured-news';
 	$newsContext['header'] 		= 	'News & Updates';
@@ -53,11 +41,11 @@
 									'showposts'			=> '3',
 									'category_name'		=> 'in-the-media'
 								);
-	$mediaContext['media'] 		= 	Timber::get_posts($mediaContextArgs);
-	Theme_Theme::processPosts($mediaContext['feed']);
+	$mediaContext['feed'] 		= 	Timber::get_posts($mediaContextArgs);
+	Theme_Theme::processPosts($mediaContext['feed']);	
 
 	$mediaContext['slide_template'] = '/views/content/news_post.html.twig';
- 	$context['media'] 		= Timber::compile('/views/components/static_feed.html.twig', $mediaContext);
+ 	$context['feed'] 		= Timber::compile('/views/components/static_feed.html.twig', $mediaContext);
 
 
  	/// Malika Blog

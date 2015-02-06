@@ -3,16 +3,6 @@
 
 	//Get Timber Context. Provides Data to TWIG views
 	$context 		= Timber::get_context();
-
-	//Get Site Header : uses SparkHeader Class
-	$sparkHeader 	= new Header_Header(array(
-	  'showLogo'      =>  true
-	  ,'headerRight'  =>  'sidebars/social.php' //Template for right side ( /views/components/... )
-	  ,'nav'          =>  'main-nav' //Menu name for nav menu
-	  ,'template'     =>  'header' //Name of header template
-	  ,'isJs'         =>  false
-	));	
-	$context['header'] 	= $sparkHeader::getView();
 	
 	///Page Feature
 	$galleryContext	= Timber::get_context();
@@ -21,8 +11,8 @@
 						'category_name'	=> 'featured'
 					);
 	$galleryContext['feed'] = get_posts($galleryContext);
-
-	$context['team_gallery'] = Timber::compile('/views/components/feature.html.twig', $featureContext);
+	
+	$context['team_gallery'] = Timber::compile('/views/components/team_gallery.html.twig', $galleryContext);
 
 
 	/// Mission Statement
