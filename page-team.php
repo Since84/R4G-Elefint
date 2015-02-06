@@ -3,17 +3,16 @@
 
 	//Get Timber Context. Provides Data to TWIG views
 	$context 		= Timber::get_context();
-	
-	///Page Feature
-	$galleryContext	= Timber::get_context();
-	$galleryContext = array( 
-						'showposts'		=> '-1',
-						'category_name'	=> 'featured'
-					);
-	$galleryContext['feed'] = get_posts($galleryContext);
-	
-	$context['team_gallery'] = Timber::compile('/views/components/team_gallery.html.twig', $galleryContext);
 
+
+	///Me
+	$missionContext['spark_class'] = 'featured-news';
+	$missionContext['header'] = 'Featured News & Updates';
+	$missionContextArgs = 	array( 
+							'showposts'		=> '3',
+							'post_type'		=> 'team'
+						);
+	$context['our_team'] = Timber::compile('/views/components/scrolling_tabs.html.twig', $missionContext);
 
 	/// Mission Statement
 	$missionContext['spark_class'] = 'our-mission';
