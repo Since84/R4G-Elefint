@@ -1,6 +1,6 @@
 /* Rights For Girls Typography Variables and Mixins */ 
 @mixin header {
-	font-family: "Franklin Gothic URW Comp";
+	font-family: "franklin-gothic-urw-comp";
 	font-weight: 700; //Demi
 	text-transform: uppercase;
 }
@@ -8,44 +8,44 @@
 @mixin h1 {
 	@include header;
 	font-weight: 700; //Demi
-	font-size: 80px; //60pt
+	font-size: 60px; //60pt
 } 
 
 @mixin h2 {
 	@include header;
 	font-weight: 400; //Book
-	font-size: 72px; //54pt
+	font-size: 54px; //54pt
 }
 
 @mixin h3 {
 	@include header;
 	font-weight: 400; //Book
-	font-size: 53.33px; //40pt
+	font-size: 40px; //40pt
 }
 
 @mixin h4 {
 	@include header;
 	font-weight: 700; //Demi
-	font-size: 50.67px; //38pt
+	font-size: 38px; //38pt
 }
 
 @mixin h5 {
 	@include header;
 	font-weight: 700; //Demi
-	font-size: 50.67px; //38pt
+	font-size: 38px; //38pt
 }
 
 @mixin h6 {
 	@include header;
-	font-weight: 700; //Demi
-	font-size: 32px; //24pt
+	font-weight: 500; //Demi
+	font-size: 24px; //24pt
 }
 
 @mixin h7 {
 	@include header;
-	font-family: "Franklin Gothic URW";
+	font-family: "franklin-gothic-urw";
 	font-weight: 400; //Book
-	font-size: 21.33px; //16pt
+	font-size: 16px; //16pt
 }
 
 @mixin sub-nav {
@@ -54,9 +54,9 @@
 }
 
 @mixin short-body {
-	font-family: "Franklin Gothic URW Cond";
+	font-family: "franklin-gothic-urw-cond";
 	font-weight: 400;
-	font-size: 26.67px;//20pt
+	font-size: 20px;//20pt
 }
 
 @mixin long-body {
@@ -65,7 +65,7 @@
 }
 
 @mixin call-to-action {
-	font-family: "Franklin Gothic URW Comp";
+	font-family: "franklin-gothic-urw-comp";
 	font-weight: 700; //Demi
 	font-size: 24px; //18pt
 }

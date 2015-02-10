@@ -3,6 +3,11 @@
 header.spark-header{
 	@include container;
 	background: $black;
+	white-space: nowrap;
+
+	.left-container {
+		@include column(4);
+	}
 
 	.site-logo{
 		display: inline-block;
@@ -10,28 +15,66 @@ header.spark-header{
 		height: 35px;
 		background: $logo no-repeat;
 		background-size: contain;
+		margin-left: 2rem;
+		vertical-align: middle;
 		&::before{
 			content: $home;
 			display: inline-block;
-			margin-left: 1em;
-			font-family: "FontAwesome"; 
+			margin-left: -2rem;
+			vertical-align: middle;
+			font-family: "FontAwesome";
+			color: $purple4;
 		}
+		&:hover {
+			background-image: $logo_hover;
+			&::before{
+				color: $purple6;
+			}
+		}
+	}
+
+	.right-container {
+		@include column(4);
+		@include push(4);
 	}
 	.social{ 
 		li {
 			display: inline-block;
 			margin-right: 1em;
+			text-align: center;
 			a{
+				color: $purple4;
+				text-decoration: none;
 				&::before{
 					display: inline-block;
 					width: 30px;
 					height: 22px;
 					font-family: "FontAwesome";
+					color: $purple4; 
+				}
+				&:hover{
+					&::before{
+						color: $teal;
+					}
 				}
 			}
 			&.twitter a::before { content: $twitter; }
 			&.facebook a::before { content: $facebook; }
 			&.mail a::before { content: $mail; }
+			&.donate a { 
+				background: $stronggray;
+				padding: 25px 40px;
+				display: inline-block;
+				&::hover{
+					background: $lightgray;
+				}
+				&::before{
+					content: $heart;
+					display: inline-block;
+					font-family: "FontAwesome";
+					color: $purple4;
+				}
+			}
 		}
 	} 
 }

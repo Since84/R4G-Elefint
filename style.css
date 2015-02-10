@@ -11,50 +11,181 @@
 /* graphics */
 /* Rights For Girls Typography Variables and Mixins */
 /** Base Styles for Rights for Girls **/
+/* line 29, style/_base.scss */
+body.rights_app {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 400;
+  font-size: 20px;
+  font-size: 24px;
+}
+/* line 32, style/_base.scss */
+body.rights_app * {
+  box-sizing: border-box;
+}
+
 /** Header Styles **/
 /* line 3, style/components/_header.scss */
 header.spark-header {
   display: block;
   margin: auto;
   width: 1200px;
+  padding: 0 60px;
   background: #2f2f2f;
+  white-space: nowrap;
 }
-/* line 7, style/components/_header.scss */
+/* line 8, style/components/_header.scss */
+header.spark-header .left-container {
+  width: 360px;
+  display: inline-block;
+  margin-left: -3px;
+}
+/* line 12, style/components/_header.scss */
 header.spark-header .site-logo {
   display: inline-block;
   width: 200px;
   height: 35px;
   background: url("style/images/logo.png") no-repeat;
   background-size: contain;
+  margin-left: 2rem;
+  vertical-align: middle;
 }
-/* line 13, style/components/_header.scss */
+/* line 20, style/components/_header.scss */
 header.spark-header .site-logo::before {
   content: "";
   display: inline-block;
-  margin-left: 1em;
+  margin-left: -2rem;
+  vertical-align: middle;
   font-family: "FontAwesome";
+  color: #81026e;
 }
-/* line 21, style/components/_header.scss */
+/* line 28, style/components/_header.scss */
+header.spark-header .site-logo:hover {
+  background-image: url("style/images/logo_hover.png");
+}
+/* line 30, style/components/_header.scss */
+header.spark-header .site-logo:hover::before {
+  color: #ff00ff;
+}
+/* line 36, style/components/_header.scss */
+header.spark-header .right-container {
+  width: 360px;
+  display: inline-block;
+  margin-left: -3px;
+  margin-left: 360px;
+}
+/* line 41, style/components/_header.scss */
 header.spark-header .social li {
   display: inline-block;
   margin-right: 1em;
+  text-align: center;
 }
-/* line 25, style/components/_header.scss */
+/* line 45, style/components/_header.scss */
+header.spark-header .social li a {
+  color: #81026e;
+  text-decoration: none;
+}
+/* line 48, style/components/_header.scss */
 header.spark-header .social li a::before {
   display: inline-block;
   width: 30px;
   height: 22px;
   font-family: "FontAwesome";
+  color: #81026e;
 }
-/* line 32, style/components/_header.scss */
+/* line 56, style/components/_header.scss */
+header.spark-header .social li a:hover::before {
+  color: #21e3db;
+}
+/* line 61, style/components/_header.scss */
 header.spark-header .social li.twitter a::before {
   content: "";
 }
-/* line 33, style/components/_header.scss */
+/* line 62, style/components/_header.scss */
 header.spark-header .social li.facebook a::before {
   content: "";
 }
-/* line 34, style/components/_header.scss */
+/* line 63, style/components/_header.scss */
 header.spark-header .social li.mail a::before {
   content: "";
+}
+/* line 64, style/components/_header.scss */
+header.spark-header .social li.donate a {
+  background: #c4c2c7;
+  padding: 25px 40px;
+  display: inline-block;
+}
+/* line 68, style/components/_header.scss */
+header.spark-header .social li.donate a::hover {
+  background: #dedade;
+}
+/* line 71, style/components/_header.scss */
+header.spark-header .social li.donate a::before {
+  content: "";
+  display: inline-block;
+  font-family: "FontAwesome";
+  color: #81026e;
+}
+
+/* line 2, style/components/_mainnav.scss */
+nav.full-width-nav {
+  position: relative;
+  z-index: 1;
+  background: #4a1249;
+  display: block;
+  margin: auto;
+  width: 1200px;
+  padding: 0 60px;
+}
+/* line 7, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li {
+  display: inline-block;
+  margin-right: 80px;
+  padding: 10px 0;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+}
+/* line 13, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li a {
+  text-decoration: none;
+  color: white;
+}
+/* line 19, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li .nav-drop {
+  position: absolute;
+  background: #380d36;
+  width: 100%;
+  left: 0;
+  padding: 0 60px;
+  line-height: 1.5rem;
+  z-index: -1;
+  bottom: 0;
+  height: 0;
+  overflow: hidden;
+  transition: .5s all ease-in-out;
+}
+/* line 32, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li .nav-drop ul {
+  position: absolute;
+  bottom: 0;
+}
+/* line 36, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li .nav-drop li {
+  display: inline-block;
+  font-family: "franklin-gothic-urw-comp";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-urw";
+  font-weight: 400;
+  font-size: 16px;
+  font-style: italic;
+  margin-right: 1.5rem;
+  line-height: 2rem;
+}
+/* line 43, style/components/_mainnav.scss */
+nav.full-width-nav > ul > li:hover .nav-drop {
+  height: 32px;
+  bottom: -32px;
 }

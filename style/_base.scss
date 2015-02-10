@@ -1,12 +1,35 @@
 /** Base Styles for Rights for Girls **/
 
-$containerWidth: 1200px;
-
+$container-width: 1200;
+$margin: 60;
+$columns: 12;
+$column-gutter: 0;
+$column-width : ($container-width - ( $margin * 2 ))/$columns ;
 
 
 // Layout/Frame
 @mixin container{
 	display: block;
 	margin: auto;
-	width: $containerWidth;
+	width: #{$container-width}px;
+	padding: 0 #{$margin}px; 
+}
+
+@mixin column($n){
+	width:  #{$n * $column-width}px;// / $container-width ) * 100%;
+	display: inline-block;
+	margin-left: -3px;
+}
+@mixin push($n){
+	margin-left:  #{$n * $column-width}px;// / $container-width ) * 100%;
+}
+
+
+
+body.rights_app{
+	@include long-body; 
+
+	& * {
+		box-sizing: border-box;
+	}
 }
