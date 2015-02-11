@@ -1,0 +1,10 @@
+
+section.our_mission{
+	background: $lightgray;
+	.container{
+		width: 930px;
+		padding: 80px 0;
+		line-height: 1.5em;
+		@include mission-statement;
+	}
+}

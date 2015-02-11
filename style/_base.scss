@@ -13,6 +13,8 @@ $column-width : ($container-width - ( $margin * 2 ))/$columns ;
 	margin: auto;
 	width: #{$container-width}px;
 	padding: 0 #{$margin}px; 
+	position: relative;
+
 }
 
 @mixin column($n){
@@ -31,5 +33,9 @@ body.rights_app{
 
 	& * {
 		box-sizing: border-box;
+	}
+
+	.container{
+		@include container;
 	}
 }

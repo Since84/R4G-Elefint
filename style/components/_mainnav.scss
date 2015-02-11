@@ -3,7 +3,7 @@ nav.full-width-nav{
 	position: relative;
 	z-index: 1;
 	background: $purple2;
-	@include container;
+	
 	& > ul > li {
 		display: inline-block;
 		margin-right: 80px;

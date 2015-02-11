@@ -15,8 +15,11 @@
 
 
 	/// Mission Statement
-	$missionContext['spark_class'] = 'our-mission';
-	$missionContext['text'] = get_post_meta( get_the_ID(), 'mission_statement', true );
+	$missionContext['spark_class'] = 'our_mission';
+	$missionID = get_page_by_title('Mission');
+	$missionID = $missionID->ID;
+	$missionContext['text'] = new TimberPost($missionID);
+	$missionContext['text'] = $missionContext['text']->content;
 	
 	$context['mission'] = Timber::compile('/views/components/text_block.html.twig', $missionContext);
 
@@ -52,7 +55,7 @@
 	
 
 	//Display Page using home template 
-	// Timber::render('/views/pages/home.html.twig', $context);
+	Timber::render('/views/pages/home.html.twig', $context);
 
 	get_footer();
 ?>

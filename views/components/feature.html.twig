@@ -1,6 +1,10 @@
-<section class="home-feature {{ spark_class }}">
-	{{ image.url }}
-	{{ heading }}
-	{{ sub_heading }}
-	{% if link != "null" %}{{ link }}{% endif %}
+<section class="home-feature {{ spark_class }}" >
+	<div class="container" style="background-image: url({{ image.url }});">
+		<hgroup>
+			<h3>{{ sub_heading }}</h3>
+			<h2>{{ heading }}</h2>
+		{% if link != "null" %}{{ link }}{% endif %}
+			<span class="link-peek"></span>
+		</hgroup>
+	</div>	
 </section>
